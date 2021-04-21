@@ -11,6 +11,7 @@
             </form>  
         </div>
         <div class="card-body">
+            <img src="{{ '/storage/' . $memo['image']}}" class='w-100 mb-3'/>
             <form method='POST' action="{{ route('update', ['id' => $memo['id'] ] ) }}">
                 @csrf
                 <input type='hidden' name='user_id' value="{{ $user['id'] }}">
