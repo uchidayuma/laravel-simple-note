@@ -1,10 +1,19 @@
 @extends('layouts.app')
 
+@section('css')
+    <style>
+        #animation svg{
+            max-height: 150px;
+        }
+    </style>
+@endsection
+
 @section('content')
 <div class="row justify-content-center ml-0 mr-0 h-100">
     <div class="card w-100">
         <div class="card-header">新規メモ作成</div>
         <div class="card-body">
+            <div id='animation'></div>
             <form method='POST' action="/store">
                 @csrf
                 <input type='hidden' name='user_id' value="{{ $user['id'] }}">
@@ -20,4 +29,13 @@
         </div>
     </div>
 </div>
+<script>
+lottie.loadAnimation({
+    container: document.getElementById('animation'), // アニメーションをさせたいdivなどhtml要素ににつけた名前
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/animations/59662-jumping-partners.json' // アニメーションのjsonファイルパスを書く
+  });
+</script>
 @endsection

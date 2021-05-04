@@ -11,6 +11,8 @@
 
     <!-- Scripts -->
     <script src="{{ '/js/app.js' }}" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie_html.min.js" integrity="sha512-cTRaLO3Zinb268g/0Y7hci5wKZTQmGWr5OEoDctmMPL/KH5J09cJZtGenczmjzJD9l08Xp+8O8mn8CoVmNX5VA==" crossorigin="anonymous"></script>
+    
     @yield('js')
 
     <!-- Fonts -->
